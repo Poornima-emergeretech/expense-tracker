@@ -1,0 +1,55 @@
+/* BASE BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at 20% 30%, #2a2a5a, #0f0f1a);
+  color: #f1f1f1;
+  overflow: hidden;
+}
+
+/* GLOW EFFECTS */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* Purple glow */
+body::before {
+  background: #8b5cf6;
+  top: -150px;
+  left: -150px;
+}
+
+/* Blue glow */
+body::after {
+  background: #6366f1;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* APP LAYOUT */
+.app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* HEADER */
+h1 {
+  margin: 0;
+  font-size: 38px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}

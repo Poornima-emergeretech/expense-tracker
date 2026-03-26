@@ -1,0 +1,119 @@
+/* INPUT BOX */
+.input-box {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* INPUT FIELDS */
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.input-box input::placeholder {
+  color: #aaaaaa;
+}
+
+.input-box input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+/* ADD BUTTON */
+.input-box button {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+}
+
+/* MAIN CONTAINER (GLASS EFFECT) */
+.container {
+  width: 420px;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* HEADINGS */
+.container h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* LIST */
+.list ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* EACH EXPENSE ITEM */
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.list li:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+/* DELETE BUTTON */
+.list button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 12px;
+}
+
+.list button:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* TOTAL TEXT */
+.container h2:last-child {
+  margin-top: 15px;
+  color: #8b5cf6;
+  font-weight: bold;
+  font-size: 22px;
+}
