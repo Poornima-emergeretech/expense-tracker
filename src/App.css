@@ -2,17 +2,21 @@
 .input-box {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   border-radius: 12px;
+
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
+
   box-shadow: 0 8px 30px rgba(0,0,0,0.4);
 }
 
 /* INPUT FIELDS */
 .input-box input {
-  flex: 1;
+  flex: 1 1 45%;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #444;
@@ -20,7 +24,6 @@
   color: #ffffff;
   outline: none;
   transition: 0.3s;
-  font-size: 14px;
 }
 
 .input-box input::placeholder {
@@ -32,9 +35,10 @@
   box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
 }
 
-/* ADD BUTTON */
+/* BUTTON */
 .input-box button {
-  padding: 12px 18px;
+  flex: 1 1 100%;
+  padding: 12px;
   background: linear-gradient(135deg, #8b5cf6, #6366f1);
   color: white;
   border: none;
@@ -45,19 +49,20 @@
 }
 
 .input-box button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+  transform: scale(1.03);
 }
 
-/* MAIN CONTAINER (GLASS EFFECT) */
+/* MAIN CONTAINER */
 .container {
-  width: 420px;
+  width: 90%;
+  max-width: 420px;
   padding: 25px;
   border-radius: 16px;
   text-align: center;
 
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(15px);
+
   border: 1px solid rgba(255,255,255,0.1);
 
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
@@ -66,7 +71,6 @@
 /* HEADINGS */
 .container h2 {
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
 /* LIST */
@@ -75,17 +79,17 @@
   margin: 0;
 }
 
-/* EACH EXPENSE ITEM */
 .list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   background: rgba(0,0,0,0.3);
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 10px;
+
   transition: 0.2s;
-  font-size: 14px;
 }
 
 .list li:hover {
@@ -101,19 +105,40 @@
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s;
-  font-size: 12px;
 }
 
 .list button:hover {
   background: #dc2626;
-  transform: scale(1.05);
 }
 
-/* TOTAL TEXT */
+/* TOTAL */
 .container h2:last-child {
   margin-top: 15px;
   color: #8b5cf6;
   font-weight: bold;
-  font-size: 22px;
+}
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 500px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box input {
+    flex: 1 1 100%;
+  }
+
+  .input-box button {
+    width: 100%;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
 }

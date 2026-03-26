@@ -2,36 +2,35 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at 20% 30%, #2a2a5a, #0f0f1a);
   color: #f1f1f1;
-  overflow: hidden;
+
+  background: radial-gradient(circle at 20% 30%, #2a2a5a, #0f0f1a);
+  overflow-x: hidden;
+}
+
+/* SOFT PATTERN OVERLAY */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
 }
 
 /* GLOW EFFECTS */
-body::before,
-body::after {
+body::before {
   content: "";
   position: absolute;
   width: 500px;
   height: 500px;
-  border-radius: 50%;
-  filter: blur(140px);
-  z-index: 0;
-  opacity: 0.7;
-}
-
-/* Purple glow */
-body::before {
   background: #8b5cf6;
   top: -150px;
   left: -150px;
-}
-
-/* Blue glow */
-body::after {
-  background: #6366f1;
-  bottom: -150px;
-  right: -150px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.6;
+  z-index: 0;
 }
 
 /* APP LAYOUT */
@@ -44,6 +43,7 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  padding: 20px;
 }
 
 /* HEADER */
@@ -51,5 +51,5 @@ h1 {
   margin: 0;
   font-size: 38px;
   color: #ffffff;
-  letter-spacing: 1px;
+  text-align: center;
 }
